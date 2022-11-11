@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Share
   - DarkPool
+  - DeathBox
   layers:
   - Default
   - TransparentFX
