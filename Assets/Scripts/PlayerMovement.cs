@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private float horizontalInput;
     private Rigidbody rb;
+    public GameObject sprite;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
-
     }
 
     private void FixedUpdate()
