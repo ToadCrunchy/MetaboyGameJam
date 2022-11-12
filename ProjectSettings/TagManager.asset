@@ -9,6 +9,7 @@ TagManager:
   - DeathBox
   - KillBox
   - Enemy
+  - Win
   layers:
   - Default
   - TransparentFX
