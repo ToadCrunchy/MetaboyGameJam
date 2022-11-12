@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShareCollect : MonoBehaviour
 {
-    public int share;
+    public int Share = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,8 @@ public class ShareCollect : MonoBehaviour
         if (co.gameObject.tag == "Share")
         {
             Debug.Log("Share collected!");
+            Share++;
             co.gameObject.SetActive(false);
-            share += share;
         }
     }
 }
