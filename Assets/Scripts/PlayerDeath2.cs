@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerDeath2 : MonoBehaviour
 {
-    public GameObject Player;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,7 @@ public class PlayerDeath2 : MonoBehaviour
         if (co.gameObject.tag == "Player")
         {
             Debug.Log("Oh dear, you died!");
-            Player.SetActive(false);
+            co.gameObject.SetActive(false);
         }
     }
 }

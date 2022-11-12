@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
-    public bool MovePlatform;
-    public bool RotatePlatform;
+    public bool MoveEnemy;
+    public bool RotateEnemy;
     public bool ChangeRotateDirection;
     public bool CollisionEffect;
     [SerializeField] GameObject[] waypoints;
@@ -17,7 +17,7 @@ public class PlatformMovement : MonoBehaviour
 
     void Update()
     {
-        if (RotatePlatform)
+        if (RotateEnemy)
         {
             if (ChangeRotateDirection)
             {
@@ -33,14 +33,14 @@ public class PlatformMovement : MonoBehaviour
 
         }
 
-        if (MovePlatform)
+        if (MoveEnemy)
         {
             if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].transform.position) < .1f)
             {
                 currentWaypointIndex++;
                 if (currentWaypointIndex >= waypoints.Length)
                 {
-                        currentWaypointIndex = 0;
+                    currentWaypointIndex = 0;
                 }
             }
 
