@@ -7,11 +7,12 @@ public class PlayerScore : MonoBehaviour
 {
 
     [SerializeField] float startTime;
-    float currentTime;
     bool timerStarted = false;
     [SerializeField] TMP_Text timerText;
     [SerializeField] TMP_Text shareText;
-    private int shareScore;
+    public static int shareScore;
+    public static int timeScore;
+    public static float currentTime;
     public GameObject Player;
 
     
@@ -38,11 +39,9 @@ public class PlayerScore : MonoBehaviour
         if (timerStarted)
         {
             currentTime -= Time.deltaTime;
-
+            timeScore = (int)currentTime;
             timerText.text = "Time Score: " + currentTime.ToString("f0");
-
             shareScore = Player.GetComponent<ShareCollect>().Share;
-
             shareText.text = shareScore.ToString("f0") + "/40 Shares";
 
             if (currentTime <= 0)
@@ -50,7 +49,6 @@ public class PlayerScore : MonoBehaviour
                 timerStarted = false;
                 currentTime = 0;
             }
-
             
         }
     }
